@@ -3,12 +3,14 @@
 # Flask==3.1.2
 # gunicorn==21.2.0
 pip>=25.0
-# Replace full TensorFlow with CPU-only, lighter version
-tensorflow-cpu==2.13.0  # Much lighter than 2.20.0
-# OR even lighter alternatives:
-# tensorflow==2.9.3  # Older but much smaller
-# OR for minimal footprint:
-# onnxruntime==1.16.3  # If you can convert models to ONNX
+# Choose ONE of these (all are lighter than 2.20.0):
+tensorflow-cpu==2.15.0  # Most recent CPU-only version
+# OR
+tensorflow==2.9.3  # Older but very stable and lighter
+# OR
+tensorflow==2.10.1  # Good balance of features/size
+# OR for absolute minimal:
+tensorflow==2.8.4
 
 Flask==3.1.2
 gunicorn==21.2.0
